@@ -1,0 +1,67 @@
+:root {
+    --color-brand: #538D4E;
+    --color-brand-rgb: 83, 141, 78;
+    --color-brand-dark: #40703B;
+    
+    --color-text-main: #121213;
+    --color-text-light: #787C7E;
+    --color-text-on-brand: #FFFFFF;
+    
+    --color-bg: #FFFFFF;
+    --color-bg-light: #F8F9FA;
+    --color-card-bg: #FFFFFF;
+    --bg-gradient-features: radial-gradient(circle at 50% 0%, #F1F8E9 0%, #F8F9FA 60%);
+    
+    --shadow-card: 0 8px 30px rgba(0,0,0,0.06);
+    --shadow-glow: 0 8px 25px rgba(83, 141, 78, 0.35);
+    
+    --border-card: rgba(0, 0, 0, 0.04);
+    --border-btn-secondary: #E0E0E0;
+    
+    --radius-btn: 14px;
+    --radius-card: 24px;
+    
+    --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --ease-smooth: cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+[data-theme="dark"] {
+    --color-brand: #6AC063; 
+    --color-brand-rgb: 106, 192, 99;
+    --color-text-on-brand: #FFFFFF; 
+    
+    --color-text-main: #FFFFFF;
+    --color-text-light: #A0A3A7;
+    
+    --color-bg: #121213;
+    --color-bg-light: #1A1A1B;
+    --color-card-bg: #1E1E1F;
+    
+    --bg-gradient-features: radial-gradient(circle at 50% 0%, rgba(106, 192, 99, 0.08) 0%, #1A1A1B 60%);
+    
+    --shadow-card: 0 8px 30px rgba(0,0,0,0.5);
+    --shadow-glow: 0 0 25px rgba(106, 192, 99, 0.4);
+    
+    --border-card: rgba(255, 255, 255, 0.08);
+    --border-btn-secondary: #3A3A3C;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text-main);
+    line-height: 1.5;
+    background-color: var(--color-bg);
+    overflow-x: hidden;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+a { text-decoration: none; }
+ul { list-style: none; }

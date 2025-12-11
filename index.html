@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slovo - Українська головоломка</title>
+
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="js/app.js" defer></script>
+
+    <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/landing.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a class="logo">
+                <div class="logo-box">S</div>
+                <span>slovo</span>
+            </a>
+            
+            <nav class="nav">
+                <a href="soon.html">
+                    <svg width="24" height="24"><use href="assets/icons.svg#icon-book"></use></svg>
+                    Правила
+                </a>
+                <a href="soon.html">
+                    <svg width="24" height="24"><use href="assets/icons.svg#icon-library"></use></svg>
+                    Бібліотека
+                </a>
+                <a href="soon.html">
+                    <svg width="24" height="24"><use href="assets/icons.svg#icon-chart"></use></svg>
+                    Лідерборд
+                </a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-btn" id="theme-toggle" aria-label="Змінити тему">
+                    <svg class="icon-sun" width="24" height="24"><use href="assets/icons.svg#icon-sun"></use></svg>
+                    <svg class="icon-moon" width="24" height="24"><use href="assets/icons.svg#icon-moon"></use></svg>
+                </button>
+
+                <a href="soon.html" class="auth-btn">
+                    <svg width="20" height="20"><use href="assets/icons.svg#icon-login"></use></svg>
+                    Вхід
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Прокачай свій мозок.<br><span>Одне слово</span> за раз.</h1>
+                <p>Найпопулярніша українська головоломка. Змагайся в інтелекті з друзями, створюй унікальні челенджі та збирай колекцію досягнень.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">
+                        <svg width="24" height="24"><use href="assets/icons.svg#icon-play"></use></svg>
+                        Почати гру
+                    </button>
+                    <button class="btn btn-secondary">
+                        <svg width="24" height="24"><use href="assets/icons.svg#icon-user"></use></svg>
+                        Грати як гість
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="sticker-placeholder">
+                    <lottie-player src="assets/hedgehog.json" background="transparent" speed="0.8" style="width: 400px; height: 400px;" loop autoplay></lottie-player>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Більше, ніж просто гра</h2>
+                <p>Ми поєднали класичну механіку з сучасними технологіями навчання, щоб зробити процес максимально корисним та захоплюючим.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-icon"><svg width="24" height="24"><use href="assets/icons.svg#icon-library"></use></svg></div>
+                        <h3>Словниковий запас</h3>
+                    </div>
+                    <p>Тисячі слів, від літературної класики до сучасного сленгу. База постійно оновлюється.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-icon"><svg width="24" height="24"><use href="assets/icons.svg#icon-play-circle"></use></svg></div>
+                        <h3>Онлайн Дуелі</h3>
+                    </div>
+                    <p>Набридло грати самому? Викликай друзів на "Словесну Рулетку".</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-icon"><svg width="24" height="24"><use href="assets/icons.svg#icon-medal"></use></svg></div>
+                        <h3>Система Рангів</h3>
+                    </div>
+                    <p>Отримуй XP за перемоги та підвищуй рівень профілю.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <div class="feature-icon"><svg width="24" height="24"><use href="assets/icons.svg#icon-chart"></use></svg></div>
+                        <h3>Детальна Статистика</h3>
+                    </div>
+                    <p>Аналізуй свої ігри та прогрес.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-to">
+        <div class="container">
+            <h2 class="how-to-title">Як це працює?</h2>
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>Обери режим</h3>
+                    <p>Випадкове слово, тематична гра або дуель.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>Знайди слово</h3>
+                    <p>У тебе є 5 спроб.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>Забери нагороду</h3>
+                    <p>Отримай досвід та місце в рейтингу.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a class="logo">
+                        <div class="logo-box">S</div>
+                        <span>slovo</span>
+                    </a>
+                    <p>Розвивай мислення, вивчай нові слова та змагайся з друзями в найсучаснішій українській словесній грі.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Гра</h4>
+                    <ul>
+                        <li><a href="soon.html">Правила</a></li>
+                        <li><a href="soon.html">Режими</a></li>
+                        <li><a href="soon.html">Рейтинг</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Спільнота</h4>
+                    <ul>
+                        <li><a href="soon.html">Discord</a></li>
+                        <li><a href="soon.html">Telegram</a></li>
+                        <li><a href="soon.html">Instagram</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Інше</h4>
+                    <ul>
+                        <li><a href="soon.html">Про нас</a></li>
+                        <li><a href="soon.html">Підтримка</a></li>
+                        <li><a href="soon.html">Політика приватності</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 slovo. Всі права захищено. Зроблено в Україні 🇺🇦</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
