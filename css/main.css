@@ -1,52 +1,156 @@
+/* =========================================
+   DEFAULT THEME (Light Base)
+   ========================================= */
 :root {
-    --color-brand: #538D4E;
+    --color-brand: #538d4e;
     --color-brand-rgb: 83, 141, 78;
-    --color-brand-dark: #40703B;
-    
+    --color-brand-dark: #40703b;
+
     --color-text-main: #121213;
-    --color-text-light: #787C7E;
-    --color-text-on-brand: #FFFFFF;
-    
-    --color-bg: #FFFFFF;
-    --color-bg-light: #F8F9FA;
-    --color-card-bg: #FFFFFF;
-    --bg-gradient-features: radial-gradient(circle at 50% 0%, #F1F8E9 0%, #F8F9FA 60%);
-    
-    --shadow-card: 0 8px 30px rgba(0,0,0,0.06);
+    --color-text-light: #787c7e;
+    --color-text-on-brand: #ffffff;
+
+    --color-bg: #ffffff;
+    --color-bg-light: #f8f9fa;
+    --color-card-bg: #ffffff;
+    --bg-gradient-features: radial-gradient(
+        circle at 50% 0%,
+        #f1f8e9 0%,
+        #f8f9fa 60%
+    );
+
+    --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.06);
     --shadow-glow: 0 8px 25px rgba(83, 141, 78, 0.35);
-    
+
     --border-card: rgba(0, 0, 0, 0.04);
-    --border-btn-secondary: #E0E0E0;
-    
+    --border-btn-secondary: #e0e0e0;
+
     --radius-btn: 14px;
     --radius-card: 24px;
-    
-    --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    --font-main:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --ease-smooth: cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+/* =========================================
+   DARK THEME (Standard)
+   ========================================= */
 [data-theme="dark"] {
-    --color-brand: #6AC063; 
+    --color-brand: #6ac063;
     --color-brand-rgb: 106, 192, 99;
-    --color-text-on-brand: #FFFFFF; 
-    
-    --color-text-main: #FFFFFF;
-    --color-text-light: #A0A3A7;
-    
+    --color-text-on-brand: #ffffff;
+
+    --color-text-main: #ffffff;
+    --color-text-light: #a0a3a7;
+
     --color-bg: #121213;
-    --color-bg-light: #1A1A1B;
-    --color-card-bg: #1E1E1F;
-    
-    --bg-gradient-features: radial-gradient(circle at 50% 0%, rgba(106, 192, 99, 0.08) 0%, #1A1A1B 60%);
-    
-    --shadow-card: 0 8px 30px rgba(0,0,0,0.5);
+    --color-bg-light: #1a1a1b;
+    --color-card-bg: #1e1e1f;
+
+    --bg-gradient-features: radial-gradient(
+        circle at 50% 0%,
+        rgba(106, 192, 99, 0.08) 0%,
+        #1a1a1b 60%
+    );
+
+    --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.5);
     --shadow-glow: 0 0 25px rgba(106, 192, 99, 0.4);
-    
+
     --border-card: rgba(255, 255, 255, 0.08);
-    --border-btn-secondary: #3A3A3C;
+    --border-btn-secondary: #3a3a3c;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* =========================================
+   MATRIX THEME
+   ========================================= */
+
+/* --- Base Matrix Settings --- */
+[data-theme-style="matrix"] {
+    --font-main: "Courier New", Courier, monospace;
+    --radius-btn: 2px;
+    --radius-card: 0px;
+    --ease-smooth: steps(5);
+}
+
+/* --- Matrix Light --- */
+[data-theme-style="matrix"][data-theme="light"] {
+    --color-brand: #008f11;
+    --color-brand-rgb: 0, 143, 17;
+    --color-bg: #e8f4e8;
+    --color-bg-light: #dcecdc;
+    --color-card-bg: #f0f9f0;
+    --color-text-main: #002b00;
+    --color-text-light: #2c5e2c;
+    --color-text-on-brand: #ffffff;
+    --bg-gradient-features:
+        linear-gradient(90deg, rgba(0, 143, 17, 0.03) 1px, transparent 1px),
+        linear-gradient(rgba(0, 143, 17, 0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+    --shadow-card: 4px 4px 0px rgba(0, 143, 17, 0.1);
+    --shadow-glow: 0 0 10px rgba(0, 143, 17, 0.2);
+    --border-card: 1px solid rgba(0, 143, 17, 0.2);
+    --border-btn-secondary: #008f11;
+}
+
+/* --- Matrix Dark --- */
+[data-theme-style="matrix"][data-theme="dark"] {
+    --color-brand: #00ff41;
+    --color-brand-rgb: 0, 255, 65;
+    --color-bg: #000000;
+    --color-bg-light: #050505;
+    --color-card-bg: #000000;
+    --color-text-main: #e0ffe0;
+    --color-text-light: #008f11;
+    --color-text-on-brand: #000000;
+    --bg-gradient-features: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    --shadow-card: 0 0 0 1px #003b00, 0 0 15px rgba(0, 255, 65, 0.1);
+    --shadow-glow: 0 0 20px rgba(0, 255, 65, 0.8);
+    --border-card: 1px solid #00ff41;
+    --border-btn-secondary: #00ff41;
+}
+
+/* --- Matrix Visual Effects --- */
+[data-theme-style="matrix"] h1,
+[data-theme-style="matrix"] h2,
+[data-theme-style="matrix"] .logo {
+    text-shadow: 0 0 4px currentColor;
+}
+
+[data-theme-style="matrix"] .logo-box {
+    border-radius: 0;
+    animation: matrix-blink 1s step-end infinite;
+}
+
+[data-theme-style="matrix"] .btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0 var(--color-brand);
+}
+
+@keyframes matrix-blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+[data-theme-style="matrix"] h1 {
+    position: relative;
+}
+
+/* =========================================
+   BASE STYLES (Global)
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: var(--font-main);
@@ -54,7 +158,13 @@ body {
     line-height: 1.5;
     background-color: var(--color-bg);
     overflow-x: hidden;
-    transition: background-color 0.4s ease, color 0.4s ease;
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease;
+}
+
+[data-theme-style="matrix"] body {
+    background-image: var(--bg-gradient-features);
 }
 
 .container {
@@ -63,5 +173,9 @@ body {
     padding: 0 24px;
 }
 
-a { text-decoration: none; }
-ul { list-style: none; }
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}

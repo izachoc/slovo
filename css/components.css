@@ -1,16 +1,21 @@
-/* --- BUTTONS --- */
+/* =========================================
+   BUTTONS
+   ========================================= */
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 18px 36px;
+    padding: 16px 32px;
     font-size: 18px;
     font-weight: 700;
     border-radius: var(--radius-btn);
     cursor: pointer;
     gap: 10px;
     border: 2px solid transparent;
-    transition: opacity .1s, all .30s ease-in-out;
+    transition:
+        opacity 0.1s,
+        all 0.3s ease-in-out;
+    text-align: center;
 }
 
 .btn-primary {
@@ -40,7 +45,9 @@
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* --- HEADER --- */
+/* =========================================
+   HEADER
+   ========================================= */
 .header {
     height: 80px;
     display: flex;
@@ -49,7 +56,9 @@
     top: 0;
     z-index: 100;
     border-bottom: 1px solid var(--border-card);
-    transition: background-color 0.4s ease, border-color 0.4s ease;
+    transition:
+        background-color 0.4s ease,
+        border-color 0.4s ease;
     backdrop-filter: blur(10px);
     background: var(--color-bg);
 }
@@ -57,7 +66,6 @@
 [data-theme="light"] .header {
     background: rgba(255, 255, 255, 0.95);
 }
-
 [data-theme="dark"] .header {
     background: rgba(18, 18, 19, 0.9);
 }
@@ -74,10 +82,10 @@
     font-size: 26px;
     font-weight: 800;
     color: var(--color-brand);
-    letter-spacing: -0.5px;
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
     transition: color 0.4s ease;
 }
 
@@ -93,14 +101,12 @@
     font-size: 20px;
     transition: background-color 0.4s ease;
 }
-
 .logo span {
+    padding-bottom: 2px;
     position: relative;
     display: block;
     line-height: 1;
-    padding-bottom: 5px;
 }
-
 .logo span::after {
     content: "";
     position: absolute;
@@ -118,7 +124,6 @@
     display: flex;
     gap: 32px;
 }
-
 .nav a {
     color: var(--color-text-light);
     font-weight: 600;
@@ -129,26 +134,24 @@
     padding: 5px 0;
     transition: color 0.3s var(--ease-smooth);
 }
-
 .nav a::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 0%;
     height: 2px;
     background: var(--color-brand);
-    transition: width 0.8s var(--ease-smooth), background-color 0.4s ease;
+    transition:
+        width 0.8s var(--ease-smooth),
+        background-color 0.4s ease;
 }
-
 .nav a:hover {
     color: var(--color-brand);
 }
-
 .nav a:hover::after {
     width: 100%;
 }
-
 .nav a svg {
     width: 18px;
     height: 18px;
@@ -156,7 +159,7 @@
     stroke: currentColor;
 }
 
-/* Actions & Theme */
+/* Actions */
 .header-actions {
     display: flex;
     align-items: center;
@@ -174,9 +177,10 @@
     align-items: center;
     justify-content: center;
     color: var(--color-text-main);
-    transition: opacity .1s, all .30s ease-in-out;
+    transition:
+        opacity 0.1s,
+        all 0.3s ease-in-out;
 }
-
 .theme-btn:hover {
     transform: scale(1.05);
     background: rgba(var(--color-brand-rgb), 0.15);
@@ -184,25 +188,20 @@
     border-color: var(--color-brand);
     box-shadow: var(--shadow-glow);
 }
-
 .theme-btn svg {
     width: 20px;
     height: 20px;
     transition: transform 0.5s var(--ease-smooth);
 }
-
 .theme-btn .icon-moon {
     display: none;
 }
-
 .theme-btn .icon-sun {
     display: block;
 }
-
 [data-theme="dark"] .theme-btn .icon-moon {
     display: block;
 }
-
 [data-theme="dark"] .theme-btn .icon-sun {
     display: none;
 }
@@ -217,9 +216,10 @@
     align-items: center;
     gap: 8px;
     border: 2px solid transparent;
-    transition: opacity .1s, all .30s ease-in-out;
+    transition:
+        opacity 0.1s,
+        all 0.3s ease-in-out;
 }
-
 .auth-btn:hover {
     background: rgba(var(--color-brand-rgb), 0.15);
     color: var(--color-brand);
@@ -228,53 +228,100 @@
     transform: scale(1.05);
 }
 
-/* --- FOOTER --- */
+/* Mobile Header */
+@media (max-width: 960px) {
+    .header {
+        height: 70px;
+    }
+    .nav {
+        display: none;
+    }
+    .auth-btn span {
+        display: none;
+    }
+    .auth-btn {
+        padding: 10px;
+    }
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
 .footer {
-    padding: 60px 0 30px;
+    padding: 80px 0 40px;
     background: var(--color-bg-light);
     border-top: 1px solid var(--border-card);
     margin-top: 60px;
 }
-
 .footer-content {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1.2fr 2fr;
+    gap: 60px;
+    align-items: start;
     margin-bottom: 40px;
 }
-
+.footer-brand {
+    max-width: 320px;
+}
 .footer-brand p {
     color: var(--color-text-light);
     font-size: 14px;
     margin-top: 16px;
-    max-width: 300px;
+    line-height: 1.6;
 }
-
+.footer-links-grid {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 700px;
+    margin-left: auto;
+}
 .footer-col h4 {
     font-size: 16px;
     font-weight: 700;
     color: var(--color-text-main);
     margin-bottom: 20px;
 }
-
 .footer-col ul li {
     margin-bottom: 12px;
 }
-
 .footer-col ul li a {
     color: var(--color-text-light);
     font-size: 14px;
     transition: color 0.2s;
 }
-
 .footer-col ul li a:hover {
     color: var(--color-brand);
 }
-
 .footer-bottom {
     text-align: center;
     padding-top: 30px;
     border-top: 1px solid var(--border-card);
     color: var(--color-text-light);
     font-size: 13px;
+}
+
+@media (max-width: 960px) {
+    .footer {
+        padding: 40px 0 20px;
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+    .footer-links-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        margin-left: 0;
+        width: 100%;
+        justify-items: center;
+        text-align: center;
+    }
+    .footer-links-grid .footer-col:last-child {
+        grid-column: span 2;
+    }
 }
